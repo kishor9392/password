@@ -1,0 +1,14 @@
+.bg {
+  background-image: linear-gradient(to bottom, #9ba9eb, #c3caea);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+
+  padding-left: 200px;
+}
+
+.img {
+  height: 80px;
+  width: 180px;
+}
