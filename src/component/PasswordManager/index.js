@@ -11,24 +11,23 @@ const PasswordManager = props => {
     onDelete(id)
   }
 
-  const v = showPassword ? (
-    {password}
-  ) : (
-    <img
-      src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-      alt="stars"
-    />
-  )
-
   return (
     <li className="bg10">
+      {console.log(showPassword)}
       <div className="bg11">
         <p className="f">{f}</p>
       </div>
 
       <div className="bg12">
         <p className="f">{website}</p>
-        <p className="f">{v}</p>
+        <p className="f">{username}</p>
+        {showPassword && <p className="f">{password}</p>}!
+        {!showPassword && (
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+            alt="stars"
+          />
+        )}
       </div>
 
       <button
