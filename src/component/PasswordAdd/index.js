@@ -62,10 +62,10 @@ class PasswordAdd extends Component {
   }
 
   render() {
-    const {username, website, password, list, search} = this.state
+    const {username, website, password, list, search, showPassword} = this.state
 
     const searchResults = list.filter(eachDestination =>
-      eachDestination.username.toLowerCase().includes(search.toLowerCase()),
+      eachDestination.website.toLowerCase().includes(search.toLowerCase()),
     )
 
     const len = searchResults.length
@@ -197,7 +197,7 @@ class PasswordAdd extends Component {
                 <PasswordManager
                   key={each.id}
                   item={each}
-                  showPassword={this.showPassword}
+                  showPassword={showPassword}
                   onDelete={this.onDelete}
                 />
               ))
